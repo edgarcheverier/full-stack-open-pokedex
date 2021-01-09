@@ -15,3 +15,7 @@ jobs:
       - name: Second step print world
         run: |
           echo " World!"
+      - name: Third step print Date
+        run: date
+      - name: Fourth step print current directory
+        run: ls
