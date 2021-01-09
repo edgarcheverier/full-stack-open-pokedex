@@ -1,0 +1,17 @@
+name: Hello World workflow
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  hello_world_job:
+    runs-on: ubuntu-18.04
+    steps:
+      - name: First step print Hello
+        run: |
+          echo "Hello"
+      - name: Second step print world
+        run: |
+          echo " World!"
