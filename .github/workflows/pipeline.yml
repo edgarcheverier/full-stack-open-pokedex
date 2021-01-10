@@ -1,0 +1,19 @@
+name: Pipeline workflow
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deployment_pipeline_job:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '12.20.1'
+      - name: install dependencies
+        run: npm install
+      - name: run eslint
+        run: npm run eslint
